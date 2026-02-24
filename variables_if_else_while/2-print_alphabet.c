@@ -6,7 +6,7 @@ char lettre = 'a';
 
 putchar (lettre);
 
-while (lettre < 'z' );
+while (lettre < 'z' )
 {
 putchar (lettre + 1);
 }
