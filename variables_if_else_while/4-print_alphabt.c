@@ -24,7 +24,7 @@ else if (l == 'p')
 l = l + 2;
 }
 
-else 
+else
 {
 l++;
 }
