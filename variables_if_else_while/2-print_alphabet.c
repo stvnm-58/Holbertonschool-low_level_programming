@@ -8,7 +8,7 @@ putchar (lettre)
 
 while (lettre < 'z' )
 {
-putchar (lettre +1);
+putchar (lettre + 1);
 }
 
 return (0);
