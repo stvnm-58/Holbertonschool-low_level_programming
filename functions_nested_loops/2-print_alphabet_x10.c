@@ -1,4 +1,4 @@
-#include "1-main.h"
+#include "main.h"
 /**
  * définie la fonction print_alphabet
  */
