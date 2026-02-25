@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- * définie la fonction print_alphabet
- */
+* main - check the code.
+*
+* Return: Always 0.
+*/
 void print_alphabet_x10(void)
 
 {
@@ -10,8 +12,8 @@ char l;
 
 while (i < 10)
 {
-l = 'a'; 
-        
+l = 'a';
+
 while (l <= 'z')
 {
 _putchar(l);
