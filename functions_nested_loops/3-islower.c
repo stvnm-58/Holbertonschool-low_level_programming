@@ -8,7 +8,7 @@ if (c >= 'a' && c <= 'z')
 }
 else
 {
-    return (o);
+    return (0);
 }
 
 }
