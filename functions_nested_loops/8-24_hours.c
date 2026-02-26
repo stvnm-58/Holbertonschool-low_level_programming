@@ -16,7 +16,7 @@ void jack_bauer(void)
 * d = minute unité
 */
 
-    a = 0;
+a = 0;
     while (a <= 2)
     {
         b = 0;
@@ -25,8 +25,12 @@ void jack_bauer(void)
             if (a == 2 && b > 3)
                 break;
 
-            
-            
+            c = 0;
+            while (c <= 5)
+            {
+
+                c++;
+            }
             b++;
         }
         a++;
