@@ -12,7 +12,7 @@ int b = 0;
 	{
 		while (b <= 14)
 		{
-		_putchar(b + 0);
+		_putchar(b + '0');
 		b++;
 		}
 
