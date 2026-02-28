@@ -20,14 +20,14 @@ else
 
 for (i = 0; i < n; i++)
 {
-            
+           
 for (b = 0; b < i; b++)
 {
 _putchar(' ');
 }
-            
-_putchar('\\'); 
-_putchar('\n'); 
+        
+_putchar('\\');
+_putchar('\n');
 }
 }
 }
