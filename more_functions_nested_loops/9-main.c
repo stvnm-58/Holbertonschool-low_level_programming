@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+void fizzbuzz (int n);
 /**
 * main - entry point to test the fizzbuzz function
 *
