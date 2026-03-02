@@ -1,16 +1,37 @@
 #include <stdio.h>
+/**
+* addition - Calcule la somme de deux entiers
+*
+* Description: Demande deux nombres à l'utilisateur et affiche le résultat.
+* Return: Toujours 0.
+*/
+
+/**
+* substraction - Calcule la différence entre deux entiers
+*
+* Description: Demande deux nombres à l'utilisateur et soustrait le second
+* au premier.
+* Return: Toujours 0.
+*/
+
+/**
+* multiplication - Calcule le produit de deux entiers
+*
+* Description: Demande deux nombres à l'utilisateur et affiche le résultat.
+* Return: Toujours 0.
+*/
+
+/**
+* division - Effectue une division entière
+*
+* Description: Demande deux nombres. Vérifie si le diviseur n'est pas nul
+* avant d'effectuer l'opération pour éviter un crash.
+* Return: Toujours 0.
+*/
 int addition(void);
-int substraction(void);
+int subtraction(void);
 int multiplication(void);
 int division(void);
-/**
-* main - Point d'entrée du programme de calculatrice
-*
-* Description: Affiche un menu, récupère le choix de l'utilisateur
-* via scanf et permet de quitter le programme en tapant 0.
-*
-* Return: Toujours 0 (Succès)
-*/
 
 int addition(void) /* Choix 1 pour Addition*/
 {
@@ -29,7 +50,7 @@ printf("Result: %d\n", result);
 return (0);
 }
 
-int substraction(void) /*Choix 2 pour Substraction*/
+int subtraction(void) /*Choix 2 pour Subtraction*/
 {
 	int a, b;
 	int result; 
@@ -61,7 +82,7 @@ printf("Result: %d\n", result);
 return (0);
 }
 
-int division(void)
+int division(void) /* Choix 4 pour Subtraction. S'arrête si division par 0*/
 {
 	int a, b;
 	int result;
@@ -119,7 +140,7 @@ scanf("%d", &choice);
 
 	if (choice == 2)
 	{
-		substraction();
+		subtraction();
 	}
 
 	if (choice == 3)
