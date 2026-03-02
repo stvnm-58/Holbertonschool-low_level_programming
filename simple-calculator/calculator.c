@@ -11,7 +11,7 @@ int main(void)
 {
 int choice;
 
-while (choice != 0, 1, 2, 3, 4)
+while (choice != 0 || choice != 1 || choice != 2 || choice != 3 || choice != 4)
 {
 printf("1) Add\n2) Substract\n3) Multiply\n4) Divide\n0) Quit\n");
 printf("Choice: ");
