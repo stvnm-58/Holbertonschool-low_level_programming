@@ -1,7 +1,8 @@
 #include <stdio.h>
-int addition (void);
-int substraction (void);
-int multiplication (void);
+int addition(void);
+int substraction(void);
+int multiplication(void);
+int division(void);
 /**
 * main - Point d'entrée du programme de calculatrice
 *
@@ -11,8 +12,7 @@ int multiplication (void);
 * Return: Toujours 0 (Succès)
 */
 
-
-int addition (void) /* Choix 1 pour Addition*/
+int addition(void) /* Choix 1 pour Addition*/
 {
 	int a, b;
 	int result;
@@ -27,10 +27,9 @@ scanf("%d", &b);
 printf("Result: %d\n", result);
 
 return (0);
-
 }
 
-int substraction (void) /*Choix 2 pour Substraction*/
+int substraction(void) /*Choix 2 pour Substraction*/
 {
 	int a, b;
 	int result; 
@@ -44,10 +43,9 @@ scanf("%d", &b);
 printf("Result: %d\n", result);
 
 return (0);
-
 }
 
-int multiplication (void)
+int multiplication(void) /*Choix 3 pour Multiplication*/
 {
 	int a, b;
 	int result; 
@@ -61,7 +59,34 @@ scanf("%d", &b);
 printf("Result: %d\n", result);
 
 return (0);
+}
 
+int division(void)
+{
+	int a, b;
+	int result;
+
+
+printf("A: ");
+scanf("%d", &a);
+		if (a == 0)
+		{
+		printf("Error: division by zero");
+		return(0);
+		}
+
+printf("B: ");
+scanf("%d", &b);
+		if (b == 0)
+		{
+		printf("Error: division by zero");
+		return(0);
+		}
+
+	result = a / b;
+printf("Result: %d\n", result);
+
+return (0);
 
 }
 
@@ -100,6 +125,11 @@ scanf("%d", &choice);
 	if (choice == 3)
 	{
 		multiplication();
+	}
+
+	if (choice == 4)
+	{
+		division();
 	}
 
 
