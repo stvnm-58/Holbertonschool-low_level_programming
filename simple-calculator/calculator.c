@@ -1,6 +1,7 @@
 #include <stdio.h>
 int addition (void);
 int substraction (void);
+int multiplication (void);
 /**
 * main - Point d'entrée du programme de calculatrice
 *
@@ -46,7 +47,23 @@ return (0);
 
 }
 
+int multiplication (void)
+{
+	int a, b;
+	int result; 
 
+printf("A: ");
+scanf("%d", &a);
+printf("B: ");
+scanf("%d", &b);
+
+	result = a * b;
+printf("Result: %d\n", result);
+
+return (0);
+
+
+}
 
 
 int main(void)
@@ -79,6 +96,12 @@ scanf("%d", &choice);
 	{
 		substraction();
 	}
+
+	if (choice == 3)
+	{
+		multiplication();
+	}
+
 
 }
 
