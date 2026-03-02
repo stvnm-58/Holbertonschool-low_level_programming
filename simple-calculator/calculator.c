@@ -1,4 +1,6 @@
 #include <stdio.h>
+int addition (void);
+int substraction (void);
 /**
 * main - Point d'entrée du programme de calculatrice
 *
@@ -7,6 +9,46 @@
 *
 * Return: Toujours 0 (Succès)
 */
+
+
+int addition (void) /* Choix 1 pour Addition*/
+{
+	int a, b;
+	int result;
+
+printf("A: ");
+scanf("%d", &a);
+printf("B: ");
+scanf("%d", &b);
+
+
+	result = a + b; 
+printf("Result: %d\n", result);
+
+return (0);
+
+}
+
+int substraction (void) /*Choix 2 pour Substraction*/
+{
+	int a, b;
+	int result; 
+
+printf("A: ");
+scanf("%d", &a);
+printf("B: ");
+scanf("%d", &b);
+
+	result = a - b;
+printf("Result: %d\n", result);
+
+return (0);
+
+}
+
+
+
+
 int main(void)
 {
 int choice;
@@ -26,6 +68,16 @@ scanf("%d", &choice);
 	{
 		printf ("Bye!\n");
 		return (0);
+	}
+
+	if (choice == 1)
+	{
+		addition();
+	}
+
+	if (choice == 2)
+	{
+		substraction();
 	}
 
 }
