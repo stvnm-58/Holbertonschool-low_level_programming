@@ -3,14 +3,14 @@
 * rev_string - Reverses a string
 * @s: The string to be reversed
 */
-void rev_string(char *s)
+void rev_string(char *str)
 {
 	int i = 0;
 	int start = 0;
 	int end;
 	char tmp;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
@@ -20,8 +20,8 @@ void rev_string(char *s)
 	while (start < end)
 	{
 		tmp = s[start];
-		s[start] = s[end];
-		s[end] = tmp;
+		str[start] = str[end];
+		str[end] = tmp;
 
 		start++;
 		end--;
