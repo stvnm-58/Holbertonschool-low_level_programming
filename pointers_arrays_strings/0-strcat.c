@@ -21,8 +21,8 @@ char *_strcat(char *dest, char *src)
 	while (src[j] != '\0')
 {
 		dest[i] = src[j];
-		i++
-		j++
+		i++;
+		j++;
 /*Prends les éléments de source pour ajouter à la suite de destination*/
 }
 
