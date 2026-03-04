@@ -13,6 +13,7 @@ char *_strcat(char *dest, char *src)
 	int j = 0; /*compteur pour source*/
 
 	while (dest[i] != '\0')
+	/*compte jusqu'à tomber sur NULL. De la destination*/
 {
 		i++;
 }
@@ -22,10 +23,11 @@ char *_strcat(char *dest, char *src)
 		dest[i] = src[j];
 		i++
 		j++
-
+/*Prends les éléments de source pour ajouter à la suite de destination*/
 }
 
 dest[i] = '\0';
+/*conclu par NULL*/
 
 return (dest);
 
