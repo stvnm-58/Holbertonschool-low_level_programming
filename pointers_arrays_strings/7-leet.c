@@ -10,16 +10,17 @@ char *leet(char *s)
 	int i = 0;
 	int j;
 	char lettres[] = "aAeEoOtTlL"; /*liste des lettres à remplacer*/
-	char chiffres[] = "4433007711"; /*liste des chiffres dans l'ordre des lettres à changer*/
+	char chiffres[] = "4433007711"; /*liste des chiffres dans l'ordre*/
 
 	while (s[i] != '\0')
 	{
 		j = 0;
 		while (lettres[j] != '\0')
 		{
-			if (s[i] == lettres[j]) /*si rencontre une des lettres*/
+			if (s[i] == lettres[j])
 			{
-				s[i] = chiffres[j]; /*alors remplace par le numéro correspondant dans la file*/
+				s[i] = chiffres[j];
+				break;
 			}
 			j++;
 		}
