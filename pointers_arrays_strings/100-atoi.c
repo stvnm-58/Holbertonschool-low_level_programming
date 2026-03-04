@@ -1,21 +1,17 @@
 #include "main.h"
 /**
-* _atoi - convertit une chaine en entier
-* @s: la chaine à convertir                 
+* _atoi - converts a string to an integer
+* @s: the string to be converted
 *
-* Return: l'entier converti
+* Return: the converted integer
 */
 int _atoi(char *s)
 {
-	int i;
-	int signe;
-	unsigned int resultat;
+	int i = 0;
+	int signe = 1;
+	unsigned int resultat = 0;
 
-	i = 0;
-	signe = 1;
-	resultat = 0;
 
-	// Défiler les chiffres
 	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
 	{
 		if (s[i] == '-')
@@ -25,7 +21,7 @@ int _atoi(char *s)
 		i++;
 	}
 
-	//  Convertion
+
 	while (s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'))
 	{
 		resultat = (resultat * 10) + (s[i] - '0');
