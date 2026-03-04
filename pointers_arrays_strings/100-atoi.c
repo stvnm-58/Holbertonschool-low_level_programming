@@ -7,8 +7,8 @@
 */
 int _atoi(char *s)
 {
-	int i = 0;
-	int signe = 1;
+	int i = 0;/*le compteur, comme d'hab*/
+	int signe = 1;/*mutliplicateur positif*/
 	unsigned int resultat = 0;
 
 
