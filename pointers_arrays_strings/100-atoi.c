@@ -16,7 +16,7 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')/* si tiret*/
 		{
-			signe = signe * -1;/* rend imper nega' et pair posi'*/
+			signe = signe * -1;/* rend impair nega' et pair posi'*/
 		}
 		i++;
 	}
