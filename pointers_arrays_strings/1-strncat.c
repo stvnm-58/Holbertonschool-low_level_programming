@@ -9,27 +9,25 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-int i = 0; /*compteur pour destination*/
-int j = 0; /*compteur pour source*/
+	int i = 0; /*compteur pour destination*/
+	int j = 0; /*compteur pour source*/
 
-while (dest[i] != '\0')
-{
-	i++;
-}
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
 
-while ((j < n) && (src[j] != '\0')) 
-/**
-* boucle tant que j est plus petit que n et src[j] ne rencontre pas '\0
-*/
-{
-	dest[i] = src[j];
-	i++;
-	j++;
+	/*
+	 * boucle tant que j est plus petit que n et src[j] ne rencontre pas '\0'
+	 */
+	while ((j < n) && (src[j] != '\0'))
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
 
-}
+	dest[i] = '\0';
 
-dest[i] = '\0';
-
-return (dest);
-
+	return (dest);
 }
