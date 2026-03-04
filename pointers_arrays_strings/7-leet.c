@@ -17,7 +17,7 @@ char *leet(char *s)
 		j = 0;
 		while (lettres[j] != '\0')
 		{
-			if (s[i] == letters[j]) /*si rencontre une des lettres*/
+			if (s[i] == lettres[j]) /*si rencontre une des lettres*/
 			{
 				s[i] = chiffres[j]; /*alors remplace par le numéro correspondant dans la file*/
 			}
