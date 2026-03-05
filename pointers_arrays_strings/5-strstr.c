@@ -12,14 +12,14 @@ if (*needle == '\0')
 return (haystack);
 while (haystack[i] != '\0')
 {
-j = 0;	
+j = 0;
 while (haystack[i + j] == needle[j])
 {
 
-if (needle[j + 1] == '\0') 				
+if (needle[j + 1] == '\0')
 return (&haystack[i]); 
-j++; 
-}		
+j++;
+}
 i++;
 }
 return ('\0');
