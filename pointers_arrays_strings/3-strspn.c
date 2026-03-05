@@ -24,7 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				found = 1;	/* On l'a trouvé ! 🎯 */
+				found = 1;	/* On l'a trouvé donc found "interrupteur" +1 */
 				count++;	/* On augmente le compte*/
 				break; 
 			}
