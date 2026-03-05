@@ -1,4 +1,5 @@
-#include "main.h"/**
+#include "main.h"
+/**
 * _memset - remplit la mémoire avec un octet constant
 * @s: zone mémoire à remplir
 * @b: octet constant
@@ -8,7 +9,7 @@
 */
 char *_memset(char *s, char b, unsigned int n)
 {
-int i = 0;
+unsigned int i = 0;
 
 while (i < n)
 {
@@ -19,3 +20,4 @@ i++;
 return (s);
 
 }
+
