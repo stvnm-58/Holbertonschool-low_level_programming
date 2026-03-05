@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strstr - localise une sous-chaîne
- * @haystack: la "botte de foin" (chaîne principale)
- * @needle: "l'aiguille" (sous-chaîne à chercher)
- */
+* _strstr - localise une sous-chaîne
+* @haystack: la "botte de foin" (chaîne principale)
+* @needle: "l'aiguille" (sous-chaîne à chercher)
+*/
 char *_strstr(char *haystack, char *needle)
 {
 int i = 0; /* compteur dans haystack */
