@@ -18,7 +18,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])/*si concordance entre s[i] et accept, retourne le caractère correspondant*/
 			{
-				return(&[i]);
+				return(&s[i]);
 			}
 
 			j++;
