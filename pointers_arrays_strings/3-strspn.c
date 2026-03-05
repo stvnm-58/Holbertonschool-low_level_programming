@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _strspn - obtient la longueur d'un sous-segment de préfixe
- * @s: chaîne à évaluer
- * @accept: chaîne contenant les caractères à faire correspondre
- *
- * Return: nombre d'octets dans le segment initial de s
- */
+* _strspn - obtient la longueur d'un sous-segment de préfixe
+* @s: chaîne à évaluer
+* @accept: chaîne contenant les caractères à faire correspondre
+*
+* Return: nombre d'octets dans le segment initial de s
+*/
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0;
