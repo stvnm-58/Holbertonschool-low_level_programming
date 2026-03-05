@@ -8,29 +8,37 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int i = 0;
-unsigned int j;
-unsigned int count = 0;
-int found;
-while (s[i] != '\0')
-{
-found = 0;
-j = 0;
-while (accept[j] != '\0')
-{
-if (s[i] == accept[j])
-{
-found = 1;
-count++;
-break; 
-}
-j++;
-}
-if (found == 0)
-{
-return (count);
-}
-i++;
-}
-return (count);
+	unsigned int i = 0;
+	unsigned int j;
+	unsigned int count = 0;
+	int found;
+
+	/* On parcourt la chaîne s tant qu'on n'est pas sur NULL*/
+	while (s[i] != '\0')
+	{
+		found = 0;	/* "interrupteur" find à 0 */
+		j = 0;
+
+		/* On cherche si s[i] existe dans accept */
+		while (accept[j] != '\0')
+		{
+			if (s[i] == accept[j])
+			{
+				found = 1;	/* On l'a trouvé donc found "interrupteur" +1 */
+				count++;	/* On augmente le compte*/
+				break;
+			}
+			j++;
+		}
+
+		/* Si après avoir fouillé tout 'accept', found est toujours à 0 on stop là */
+		if (found == 0)
+		{
+			return (count);
+		}
+
+		i++;
+	}
+
+	return (count);
 }
