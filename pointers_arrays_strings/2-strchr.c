@@ -18,7 +18,7 @@ while (s[i] >= '\0')
 		return (&s[i]);
 	}
 
-	if(s[i] == '\0')
+	if (s[i] == '\0')
 	{
 		break;
 	}
