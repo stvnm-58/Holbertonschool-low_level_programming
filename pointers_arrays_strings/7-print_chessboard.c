@@ -7,7 +7,7 @@
 */
 void print_chessboard(char (*a)[8])
 {
-int i = 0 /*ligne*/
+int i = 0;/*ligne*/
 int j; /*colonne*/
 
 while (i < 8)/*défile les lignes*/
@@ -19,10 +19,10 @@ while (i < 8)/*défile les lignes*/
 		
 
 	}
-}
 
-i++/*passe à la ligne suivante*/
+	i++;/*passe à la ligne suivante*/
 
 _putchar('\n');
+}
 
 }
