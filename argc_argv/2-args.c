@@ -11,19 +11,19 @@ int i = 0;
 int j;
 (void)argc;
 
-_putchar('\n');
-
 while (i < argc)
+/*on cale la limite de i sur le argc*/
 {
+
+
     for (j = 0; argv[i][j] != '\0'; j++)
+    /*boucle qui print chaque char(en position j) du argv déterminé par i*/
     {
         _putchar(argv[i][j]);
     }
 i++;
 _putchar('\n');
 }
-
-
 
 return(0);
 }
