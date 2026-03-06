@@ -27,7 +27,6 @@ char *_strstr(char *haystack, char *needle)
 
 			j++;/* carac suivant */
 		}
-		
 		i++;/* carac suivant du haystack */
 	}
 
