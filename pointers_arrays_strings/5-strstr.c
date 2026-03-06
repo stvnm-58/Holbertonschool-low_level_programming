@@ -1,8 +1,11 @@
 #include "main.h"
 /**
-* _strstr - localise une sous-chaîne
-* @haystack: la "botte de foin" (chaîne principale)
-* @needle: "l'aiguille" (sous-chaîne à chercher)
+* _strstr - locates a substring
+* @haystack: the string to be searched
+* @needle: the substring to be located
+*
+* Return: a pointer to the beginning of the located substring,
+* or NULL if the substring is not found.
 */
 char *_strstr(char *haystack, char *needle)
 {
