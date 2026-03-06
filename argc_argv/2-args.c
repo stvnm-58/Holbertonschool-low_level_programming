@@ -21,9 +21,11 @@ while (i < argc)
     {
         _putchar(argv[i][j]);
     }
-i++;
 _putchar('\n');
+i++;
 }
+
+
 
 return(0);
 }
