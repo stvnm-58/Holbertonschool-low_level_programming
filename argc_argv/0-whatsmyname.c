@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int main (int argc)
+int main (int argc, int argv[])
 {
-printf(argc)
+printf(argc[0]);
+
+return(0)
 }
