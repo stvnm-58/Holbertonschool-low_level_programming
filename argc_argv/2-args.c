@@ -11,7 +11,7 @@ int i = 0;
 int j;
 (void)argc;
 
-while (argv[i] < argc)
+while (i < argc)
 {
     for (j = 0; argv[i][j] != '\0'; j++)
     {
