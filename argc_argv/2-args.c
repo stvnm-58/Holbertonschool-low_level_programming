@@ -11,6 +11,8 @@ int i = 0;
 int j;
 (void)argc;
 
+_putchar('\n');
+
 while (i < argc)
 {
     for (j = 0; argv[i][j] != '\0'; j++)
@@ -18,9 +20,10 @@ while (i < argc)
         _putchar(argv[i][j]);
     }
 i++;
+_putchar('\n');
 }
 
-_putchar('\n');
+
 
 return(0);
 }
