@@ -15,7 +15,7 @@ while (argv[i] > argc)
 {
     for (j = 0; j != '\0'; j++)
     {
-        _putchar((argv[j] - 1) + '0');
+        _putchar(argv[i][j]);
     }
 i++;
 }
