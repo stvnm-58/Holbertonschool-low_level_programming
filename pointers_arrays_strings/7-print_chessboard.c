@@ -16,8 +16,6 @@ while (i < 8)/*défile les lignes*/
 	for (j = 0;  j < 8 ; j++)
 	{
 		_putchar(a[i][j]);/*écrit ce qui correspond dans la colonne j*/
-		
-
 	}
 
 	i++;/*passe à la ligne suivante*/
