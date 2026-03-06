@@ -18,16 +18,16 @@ while (i < argc)
 {
 
 
-    for (j = 0; argv[i][j] != '\0'; j++)
-    /*boucle qui print chaque char(en position j) du argv déterminé par i*/
-    {
-        _putchar(argv[i][j]);
-    }
+	for (j = 0; argv[i][j] != '\0'; j++)
+	/*boucle qui print chaque char(en position j) du argv déterminé par i*/
+	{
+		_putchar(argv[i][j]);
+	}
 _putchar('\n');
 i++;
 }
 
 
 
-return(0);
+return (0);
 }
