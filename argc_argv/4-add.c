@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
-				_putchar('E'), _putchar('r'), _putchar('r'), _putchar('o'), _putchar('r'), _putchar('\n');
+				_putchar('E'), _putchar('r'), _putchar('r');
+				_putchar('o'), _putchar('r'), _putchar('\n');
 				return (1);
 			}
 			num = (num * 10) + (argv[i][j] - '0');
