@@ -26,7 +26,7 @@ _putchar('o');
 _putchar('r');
 _putchar('\n');
 
-    return (1);
+	return (1);
 }
 
 
@@ -47,15 +47,15 @@ resultat = num1 * num2;
 
 if (resultat == '0')
 {
-    _putchar('0');
+	_putchar('0');
 }
 
 else
 {
-    for (i = 0; resultat[i] != '\0'; i++)
-    {
-        _putchar(resultat[i]);
-    }
+	for (i = 0; resultat[i] != '\0'; i++)
+	{
+		_putchar(resultat[i]);
+	}
 /*affiche le résultat caractère par caracère en utilisant un tableau pour resultat*/
 
 }
