@@ -1,3 +1,5 @@
+#include "main.h"
+
 int main(int argc, char *argv[])
 {
 	int i, j, n1 = 0, n2 = 0, res, div = 1;
