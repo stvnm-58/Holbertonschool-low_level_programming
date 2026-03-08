@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * main - multiplie deux nombres passés en arguments.
+ * @argc: nombre d'arguments reçus.
+ * @argv: tableau de chaînes de caractères.
+ *
+ * Return: 0 si succès, 1 si erreur.
+ */
 int main(int argc, char *argv[])
 {
 	int i, j, n1 = 0, n2 = 0, res, div = 1;
@@ -7,7 +14,8 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	/*Bloc error*/
 	{
-		_putchar('E'), _putchar('r'), _putchar('r'), _putchar('o'), _putchar('r'), _putchar('\n');
+		_putchar('E'), _putchar('r'), _putchar('r'), _putchar('o'), _putchar('r');
+		_putchar('\n');
 		return (1);
 	}
 	/* conversion argv[1] en entier */
@@ -31,7 +39,7 @@ int main(int argc, char *argv[])
 			_putchar('-'), res = -res;
 		}
 		while (div <= res / 10)
-		/*x10 pour à chaque tourne pour print centaine, dizaine, unité etc etc.*/
+		/*x10 pour print centaine, dizaine, unité...*/
 			div *= 10;
 		while (div > 0)
 		/* Affichage des chiffres */
