@@ -1,44 +1,35 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - adds positive numbers
- * @argc: arguments count
- * @argv: arguments vector
- * Return: 0 if success, 1 if error
+ * main - adds positive numbers.
+ * @argc: number of arguments.
+ * @argv: array of arguments.
+ *
+ * Return: 0 (Success), 1 (Error).
  */
 int main(int argc, char *argv[])
 {
-	int i = 1, j, somme = 0, num, div = 1;
+	int i, j, somme = 0;
 
-	while (i < argc)
+	for (i = 1; i < argc; i++)
+	/* boucle qui scan chaque argument reçu */
 	{
-		num = 0;
 		for (j = 0; argv[i][j] != '\0'; j++)
-		/*boucle qui scan char(en position j) du argv déterminé par i*/
+		/* verif si chiffre */
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
-				_putchar('E'), _putchar('r'), _putchar('r');
-				_putchar('o'), _putchar('r'), _putchar('\n');
+				printf("Error\n");
 				return (1);
 			}
-			num = (num * 10) + (argv[i][j] - '0');
 		}
-		somme += num;
-		i++;
+		/* Conversion avec atoi */
+		somme += atoi(argv[i]);
 	}
-	if (somme == 0)
-		_putchar('0');
-	else
-	{
-		while (div <= somme / 10)
-			div *= 10;
-		while (div > 0)
-		{
-			_putchar(((somme / div) % 10) + '0');
-			div /= 10;
-		}
-	}
-	_putchar('\n');
+
+	printf("%d\n", somme);
+
 	return (0);
 }
