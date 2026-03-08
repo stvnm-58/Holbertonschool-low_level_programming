@@ -9,7 +9,7 @@
 int main(int argc,char *argv[])
 {
 
-int i = 0;
+int i;
 int num1 = 0;
 int num2 = 0;
 int resultat;
@@ -51,16 +51,31 @@ if (resultat == '0')
 }
 
 else
-{
-	for (i = 0; resultat[i] != '\0'; i++)
 	{
-		_putchar(resultat[i]);
+
+		if (resultat < 0)
+		/*affichage des négatifs*/
+		{
+			_putchar('-');
+			resultat = -resultat;
+		}
+
+		div = 1;
+		while (div <= resultat / 10)
+		/*x10 pour à chaque tourne pour print centaine, dizaine, unité etc etc.*/
+		{
+			div *= 10;
+		}
+
+		/* Affichage des chiffres */
+		while (div > 0)
+		{
+			_putchar(((resultat / div) % 10) + '0');
+			div /= 10;
+		}
 	}
-/*affiche le résultat caractère par caracère en utilisant un tableau pour resultat*/
+	_putchar('\n');
 
-}
-
-_putchar('\n');
-return (0);
+	return (0);
 
 }
