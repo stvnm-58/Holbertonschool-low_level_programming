@@ -36,7 +36,7 @@ for (i2 = 0; s2[i2] != '\0'; i2++)
 /*permet de compter l'espace que prend s1 + s2 sans \0*/
 
 
-result = malloc(sizeof(char) * i + i2 + 1);
+result = malloc(sizeof(char) * (i + i2 + 1));
 /*permet d'avoir la taille de s1 + s2 + \0*/
 
 if (result == NULL)
