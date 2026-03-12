@@ -1,5 +1,5 @@
 #include "dog.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
 * print_dog - affiche les informations d'une structure dog
 * @d: pointeur vers la structure dog à afficher
@@ -9,7 +9,7 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-if (d != '\0')
+if (d != NULL)
 {
 	d->name = name;
 	d->age = age;
