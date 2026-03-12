@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 /**
 * malloc_checked - alloue de la mémoire avec malloc
 * @b: nombre d'octets à allouer
@@ -11,17 +9,13 @@
 void *malloc_checked(unsigned int b)
 {
 	void *ptr;
-
 	ptr = malloc(b);
 	/*Alloue b de place à ptr*/
-	
 	if (ptr == NULL)
 	{
 		exit(98);
 		/*kill le programme si null, renvoie 98*/
 	}
-
 return (ptr);
 /*return ptr si ok*/
-
 }
