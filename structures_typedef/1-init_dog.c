@@ -1,11 +1,11 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
-* print_dog - affiche les informations d'une structure dog
-* @d: pointeur vers la structure dog à afficher
-*
-* Description: Si d est NULL, la fonction ne fait rien.
-* Si un élément de la structure est NULL, affiche (nil) à sa place.
+* init_dog - initializes a variable of type struct dog
+* @d: pointer to struct dog to initialize
+* @name: name to set
+* @age: age to set
+* @owner: owner to set
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
