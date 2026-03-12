@@ -10,13 +10,14 @@
 */
 char *create_array(unsigned int size, char c)
 {
+
+char *array;
+int i = 0;
+
 if (size == 0)
 {
 return (NULL);
 }
-
-char *array;
-int i = 0;
 
 array = malloc(sizeof(char) * size);
 /*allocation de la mémoire de taille char fois le nombre size demandé*/
