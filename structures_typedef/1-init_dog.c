@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "dog.h"
+#include <stdio.h>
 /**
 * print_dog - affiche les informations d'une structure dog
 * @d: pointeur vers la structure dog à afficher
