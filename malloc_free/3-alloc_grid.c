@@ -5,8 +5,7 @@
 * alloc_grid - Crée une grille de 2 dimensions d'entiers
 * @width: largeur (colonnes)
 * @height: hauteur (lignes)
-*
-* Return: pointeur vers la grille, ou NULL si échec
+*Return: pointeur vers la grille, ou NULL si échec
 */
 int **alloc_grid(int width, int height)
 {
