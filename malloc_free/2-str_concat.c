@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int i, i2, j, j2;
 	char *result;
-
+	
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
@@ -26,16 +26,21 @@ char *str_concat(char *s1, char *s2)
 		;
 	for (i2 = 0; s2[i2] != '\0'; i2++)
 		;
+	/*permet de compter l'espace que prend s1 + s2 sans \0*/
 	result = malloc(sizeof(char) * (i + i2 + 1));
+	/*permet d'avoir la taille de s1 + s2 + \0*/
 	if (result == NULL)
+	/*retour NULL de sécurité */
 	{
 		return (NULL);
 	}
 	for (j = 0; s1[j] != '\0'; j++)
+	/*copiage dans result*/
 	{
 		result[j] = s1[j];
 	}
 	for (j2 = 0; s2[j2] != '\0'; j++, j2++)
+	/*copiage de de la suite dans result*/
 	{
 		result[j] = s2[j2];
 	}
