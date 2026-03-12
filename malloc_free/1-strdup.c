@@ -14,8 +14,8 @@ if (str == NULL)
 	return (NULL);
 }
 
-int i;
-int j = 0;
+unsigned int i;
+unsigned int j = 0;
 char *copy;
 
 
@@ -26,6 +26,11 @@ for (i = 0; str[i] != '\0'; i++)
 
 copy = malloc(sizeof(char) * i + 1);
 /*on envoi le resultat de i dans malloc +1 pour le \0*/
+
+if (copy == NULL)
+{
+	return (NULL);
+}
 
 
 while (str[j] != '\0')
@@ -39,10 +44,6 @@ while (str[j] != '\0')
 copy[j] = '\0';
 /*on rajoute bien le NULL à la fin de la boucle*/
 
-if (copy == NULL)
-{
-	return (NULL);
-}
 
 return (copy);
 
