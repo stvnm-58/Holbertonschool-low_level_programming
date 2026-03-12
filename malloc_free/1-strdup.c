@@ -9,22 +9,22 @@
 */
 char *_strdup(char *str)
 {
-if (str == NULL)
-{
-	return (NULL);
-}
 
 unsigned int i;
 unsigned int j = 0;
 char *copy;
 
+if (str == NULL)
+{
+	return (NULL);
+}
 
 for (i = 0; str[i] != '\0'; i++)
 	;
 /*On set i pour connaître le nombre de char*/
 
 
-copy = malloc(sizeof(char) * i + 1);
+copy = malloc(sizeof(char) * (i + 1));
 /*on envoi le resultat de i dans malloc +1 pour le \0*/
 
 if (copy == NULL)
