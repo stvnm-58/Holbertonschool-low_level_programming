@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <stdio.h>
 /**
  * print_strings - prints strings, followed by a new line.
  * @separator: the string to be printed between the strings.
@@ -13,9 +14,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list chaine;
 	unsigned int i;
-	va_start(chaine, n);
 	char *ptr;
+	va_start(chaine, n);
 
+	
 for (i = 0; i < n ; i++)
 {
 
@@ -23,7 +25,7 @@ ptr = va_arg(chaine, char *);
 
 	if(ptr == NULL)
 	{
-		printf("nil");
+		printf("(nil)");
 	}
 
 	else
