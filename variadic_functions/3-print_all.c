@@ -1,10 +1,18 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+* print_all - Prints anything based on the format provided.
+* @format: A list of types of arguments passed to the function.
+*
+* Description: This function iterates through the format string and
+* calls the corresponding function to print the argument.
+*/
 	char *str;
 	int i = 0;
 	int j = 0;
+	char *sep = "";
+/*char sep (séparateur) "nul" pour ne pas print lors du bouclage la première fois*/
 
 /*
 * En suivant, toutes mes fonctions pour c i f s
@@ -65,14 +73,21 @@ while (format && format[i])
 
 	while (lettre[j].symbole != NULL)
 	{
-		
-		j++
+
+		if (format[i] == lettre[j].symbole)
+		{
+		printf("%s", sep);
+		lettre[j].fonction(liste);
+		sep = ", ";
+		break;
+		}
+		j++;
 	}
 
-i++
+i++;
 }
 
-/* ici les appels des différente fonction dépendamment du type d'entré*/
-    
-	
+/* ici les appels des différente fonction dépendamment du type d'entrée*/
+va_end(liste);
+printf("\n");
 }
