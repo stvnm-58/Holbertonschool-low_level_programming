@@ -8,12 +8,7 @@
 * Description: This function iterates through the format string and
 * calls the corresponding function to print the argument.
 */
-	char *str;
-	int i = 0;
-	int j = 0;
-	char *sep = "";
-/*char sep (séparateur) "nul" pour ne pas print lors du bouclage la première fois*/
-
+	
 /*
 * En suivant, toutes mes fonctions pour c i f s
 *
@@ -51,43 +46,46 @@ void print_string(va_list liste)
 void print_all(const char * const format, ...)
 {
 	va_list liste;
-	va_start(liste, format);
-
-
 	
-format_t lettre[] =
-{
-	{'c', print_char},
-	{'i', print_int},
-	{'f', print_float},
-	{'s', print_string},
-	{'\0', NULL}
-};
+	int i = 0;
+	int j = 0;
+	char *sep = "";
+	/*char sep (séparateur) "nul" pour ne pas print lors du bouclage la première fois*/
+	
+	format_t lettre[] =
+	{
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string},
+		{'\0', NULL}
+	};
 
-while (format && format[i])
-/*
-* tant que format existe (diff de NULL)
-* et jusqu'à ce que format[i] devienne NULL
-*/
-{
-
-	while (lettre[j].symbole != NULL)
+	va_start(liste, format);
+	
+	while (format && format[i])
+	/*
+	* tant que format existe (diff de NULL)
+	* et jusqu'à ce que format[i] devienne NULL
+	*/
 	{
 
-		if (format[i] == lettre[j].symbole)
+		while (lettre[j].symbole != '\0')
 		{
-		printf("%s", sep);
-		lettre[j].fonction(liste);
-		sep = ", ";
-		break;
+			if (format[i] == lettre[j].symbole)
+			{
+				printf("%s", sep);
+				lettre[j].fonction(liste);
+				sep = ", ";
+				break;
+			}
+			j++;
 		}
-		j++;
+
+		i++;
 	}
 
-i++;
-}
-
-/* ici les appels des différente fonction dépendamment du type d'entrée*/
-va_end(liste);
-printf("\n");
+	/* ici les appels des différente fonction dépendamment du type d'entrée*/
+	va_end(liste);
+	printf("\n");
 }
