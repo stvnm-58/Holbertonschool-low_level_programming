@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 	/* Boucle tant que le format existe et n'est pas terminé */
 	while (format && format[i])
 	{
-		j = 0; /* Remise à zéro pour parcourir le tableau 'lettre' à chaque fois */
+		j = 0; /* Remise à zéro pour parcourir le tableau 'lettre' à chaque fois*/
 		while (lettre[j].symbole != '\0')
 		{
 			if (format[i] == lettre[j].symbole)
