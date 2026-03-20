@@ -7,7 +7,7 @@
 *
 * Description: This function iterates through the format string and
 * calls the corresponding function to print the argument.
-*/	
+*/
 /*
 * En suivant, toutes mes fonctions pour c i f s
 *
@@ -38,17 +38,15 @@ void print_string(va_list liste)
 
 	printf("%s", str);
 }
-
 /**********************************************/
-
 void print_all(const char * const format, ...)
 {
 	va_list liste;
-	
+
 	int i = 0;
 	int j = 0;
 	char *sep = "";
-/*char sep (séparateur) 
+/*char sep (séparateur)
 *"nul" pour ne pas print lors du bouclage la première fois
 */
 	format_t lettre[] =
@@ -61,7 +59,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(liste, format);
-	
+
 	while (format && format[i])
 	/*
 	* tant que format existe (diff de NULL)
@@ -69,8 +67,7 @@ void print_all(const char * const format, ...)
 	*/
 	{
 		j = 0;
-		while (lettre[j].symbole != '\0')
-		{
+		while (lettre[j].symbole != '\0'){
 			if (format[i] == lettre[j].symbole)
 			{
 				printf("%s", sep);
@@ -83,7 +80,6 @@ void print_all(const char * const format, ...)
 
 		i++;
 	}
-
 	/* ici les appels des différente fonction dépendamment du type d'entrée*/
 	va_end(liste);
 	printf("\n");
