@@ -69,7 +69,7 @@ void print_all(const char * const format, ...)
 	* et jusqu'à ce que format[i] devienne NULL
 	*/
 	{
-
+		j = 0;
 		while (lettre[j].symbole != '\0')
 		{
 			if (format[i] == lettre[j].symbole)
