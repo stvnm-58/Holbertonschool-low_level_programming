@@ -15,15 +15,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list chaine;
 	unsigned int i;
 	char *ptr;
+
 	va_start(chaine, n);
 
-	
 for (i = 0; i < n ; i++)
 {
 
 ptr = va_arg(chaine, char *);
 
-	if(ptr == NULL)
+	if (ptr == NULL)
 	{
 		printf("(nil)");
 	}
@@ -35,7 +35,7 @@ ptr = va_arg(chaine, char *);
 
 	if (separator != NULL && i < n - 1)
 	{
-		printf("%s",separator);
+		printf("%s", separator);
 	}
 
 }
