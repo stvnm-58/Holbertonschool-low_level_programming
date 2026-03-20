@@ -7,13 +7,11 @@
 *
 * Description: This function iterates through the format string and
 * calls the corresponding function to print the argument.
-*/
-	
+*/	
 /*
 * En suivant, toutes mes fonctions pour c i f s
 *
 */
-
 void print_char(va_list liste)
 {
 	printf("%c", va_arg(liste, int));
@@ -31,14 +29,14 @@ void print_float(va_list liste)
 
 void print_string(va_list liste)
 {
-    char *str = va_arg(liste, char *);
+	char *str = va_arg(liste, char *);
 
-    if (str == NULL)
-    {
-        str = "(nil)";
-    }
+	if (str == NULL)
+	{
+		str = "(nil)";
+	}
 
-    printf("%s", str);
+	printf("%s", str);
 }
 
 /**********************************************/
@@ -50,8 +48,9 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	int j = 0;
 	char *sep = "";
-	/*char sep (séparateur) "nul" pour ne pas print lors du bouclage la première fois*/
-	
+/*char sep (séparateur) 
+*"nul" pour ne pas print lors du bouclage la première fois
+*/
 	format_t lettre[] =
 	{
 		{'c', print_char},
