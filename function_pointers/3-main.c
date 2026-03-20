@@ -16,16 +16,16 @@ int (*f)(int, int);
 int num1;
 int num2;
 
-num1 = atoi(argv[1]);
-num2 = atoi(argv[3]);
-
-f = get_op_func(argv[2]);
-
 if (argc != 4)
 {
 	printf ("Error\n");
 	exit (98);
 }
+
+num1 = atoi(argv[1]);
+num2 = atoi(argv[3]);
+
+f = get_op_func(argv[2]);
 
 
 if (f == NULL || argv[2][1] != '\0')
