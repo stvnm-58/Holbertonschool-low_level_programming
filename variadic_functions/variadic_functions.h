@@ -6,7 +6,7 @@
 
 typedef struct format
 {
-    char symbole;
+	char symbole;
 	void (*fonction)(va_list);
 } format_t;
 

@@ -15,7 +15,7 @@ unsigned int i;
 int total = 0;
 if (n == 0)
 {
-	return(0);
+	return (0);
 }
 va_start(somme, n);
 for (i = 0; i < n; i++)
