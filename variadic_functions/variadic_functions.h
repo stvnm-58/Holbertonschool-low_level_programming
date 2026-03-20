@@ -3,6 +3,11 @@
 
 #include <unistd.h>
 #include <stdio.h>
+/**
+* struct format - Structure pour associer un symbole à une fonction
+* @symbole: Le caractère représentant le type (ex: c, i, f, s)
+* @fonction: Le pointeur vers la fonction de rappel correspondante
+*/
 
 typedef struct format
 {
