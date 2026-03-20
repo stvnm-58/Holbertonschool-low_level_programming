@@ -18,8 +18,8 @@ int num2;
 
 if (argc != 4)
 {
-	printf ("Error\n");
-	exit (98);
+	printf("Error\n");
+	exit(98);
 }
 
 num1 = atoi(argv[1]);
@@ -31,13 +31,13 @@ f = get_op_func(argv[2]);
 if (f == NULL || argv[2][1] != '\0')
 {
 	printf("Error\n");
-	exit (99);
+	exit(99);
 }
 
 if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
 {
 	printf("Error\n");
-	exit (100);
+	exit(100);
 }
 
 
