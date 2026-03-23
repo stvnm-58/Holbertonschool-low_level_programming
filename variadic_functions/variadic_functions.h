@@ -3,6 +3,7 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include <stdarg.h>
 /**
 * struct format - Structure pour associer un symbole à une fonction
 * @symbole: Le caractère représentant le type (ex: c, i, f, s)
