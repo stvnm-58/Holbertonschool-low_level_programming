@@ -15,8 +15,7 @@ while (current != NULL)
 {
 	if (current->str == NULL)
 	{
-		printf("[0]");
-		printf("(nil)\n");
+		printf("[0] (nil)\n");
 	}
 
 	else
