@@ -15,6 +15,9 @@ list_t *new_node;
 char *new_str;
 unsigned int length = 0;
 
+if (str == NULL)
+		return (NULL);
+
 new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 	{
@@ -38,5 +41,4 @@ while (str[length])
 	*head = new_node;
 
 return (new_node);
-
 }
