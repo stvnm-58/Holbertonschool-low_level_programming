@@ -31,10 +31,8 @@ new_str = strdup(str);
 while (str[length])
 		length++;
 
-
 	new_node->str = new_str;
 	new_node->len = length;
-
 	new_node->next = *head;
 
 	*head = new_node;
