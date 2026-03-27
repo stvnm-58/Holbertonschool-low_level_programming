@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <string.h>
+#include <stdlib.h>
 /**
 * add_node - ajoute un nouveau nœud au début d'une liste list_t
 * @head: double pointeur vers la tête de la liste
