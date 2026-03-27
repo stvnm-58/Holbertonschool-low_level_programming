@@ -1,7 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
-#include <string.h> // CORRECTION : Pour strdup
-#include <stdlib.h> // CORRECTION : Pour malloc et free
-
 /**
  * add_node - ajoute un nouveau nœud au début d'une liste list_t
  * @head: double pointeur vers la tête de la liste
