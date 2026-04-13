@@ -8,7 +8,7 @@
  * main - Copie le contenu d'un fichier dans un autre.
  * @argc: Nombre d'arguments.
  * @argv: Tableau des arguments.
- * Return: 0 en cas de succès, ou un code d'erreur (97-100).
+ * Return: 0 en cas de succès.
  */
 int main(int argc, char *argv[])
 {
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
 	if (n_lu == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		close(fd_from);
 		close(fd_to);
 		exit(98);
