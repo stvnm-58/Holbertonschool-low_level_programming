@@ -60,6 +60,8 @@ close(fd);
 
 return (n_ecrit);
 
+}
+
 /*
 * Déclarer les variables au début (fd, bac, n_lu, n_ecrit).
 *
@@ -78,4 +80,3 @@ return (n_ecrit);
 * Retourner le résultat final.
 */
 
-}
