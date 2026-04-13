@@ -37,7 +37,7 @@ while (text_content[len])
 n_ecrit = write(fd, text_content, len);
 	if (n_ecrit == -1 || n_ecrit != len)
 	{
-	close (fd);
+	close(fd);
 	return (-1);
 	}
 
