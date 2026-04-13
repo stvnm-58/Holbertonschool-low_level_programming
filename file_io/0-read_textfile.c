@@ -47,7 +47,7 @@ n_lu = read(fd, bac, letters);
 	return (0);
 	}
 
-n_ecrit =  write(1, bac, n_lu);
+n_ecrit =  write(STDOUT_FILENO, bac, n_lu);
 	if (n_lu != n_ecrit)
 	{
 	free(bac);
