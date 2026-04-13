@@ -17,13 +17,10 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-
 int fd; /*File descriptor*/
 char *bac;
 ssize_t n_lu; /*compter ce qui a été lu*/
 ssize_t n_ecrit; /*pour ce qui a été écrit*/
-
-
 
 	if (filename == NULL)
 	return (0);
@@ -54,12 +51,9 @@ n_ecrit =  write(STDOUT_FILENO, bac, n_lu);
 	close(fd);
 	return (0);
 	}
-
 free(bac);
 close(fd);
-
 return (n_ecrit);
-
 }
 
 /*
