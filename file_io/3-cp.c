@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	int fd_from, fd_to;
 	char buffer[1024];
 	ssize_t n_lu, n_ecrit;
-	
+
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	fd_from = open(argv[1], O_RDONLY);
