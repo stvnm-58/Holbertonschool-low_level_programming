@@ -14,29 +14,29 @@
 int create_file(const char *filename, char *text_content)
 {
 
-int fd;
-int len = 0; 
-int n_ecrit;
+	int fd;
+	int len = 0;
+	int n_ecrit;
 
 	if (filename == NULL)
-	return (-1);
+		return (-1);
 
-fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
-	return (-1);
+		return (-1);
 
 	if (text_content != NULL)
-		{
-			while (text_content[len])
+	{
+		while (text_content[len])
 			len++;
-		
-			n_ecrit = write (fd, text_content, len);
-				if(n_ecrit == -1 || n_ecrit != len)
-				{
-					close (fd);
-					return (-1);
-				}
+
+		n_ecrit = write(fd, text_content, len);
+		if (n_ecrit == -1 || n_ecrit != len)
+		{
+			close(fd);
+			return (-1);
 		}
-close (fd);
-return (1);
+	}
+	close(fd);
+	return (1);
 }
