@@ -33,7 +33,7 @@ fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 			n_ecrit = write (fd, text_content, len);
 				if(n_ecrit == -1 || n_ecrit != len)
 				{
-					clode (fd);
+					close (fd);
 					return (-1);
 				}
 		}
