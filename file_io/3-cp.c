@@ -28,17 +28,14 @@ int main(int argc, char *argv[])
 	int fd_from, fd_to;
 	char buffer[1024];
 	ssize_t n_lu, n_ecrit;
-
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	fd_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (fd_to == -1)
 	{
@@ -46,7 +43,6 @@ int main(int argc, char *argv[])
 		close_err(fd_from);
 		exit(99);
 	}
-
 	while ((n_lu = read(fd_from, buffer, 1024)) > 0)
 	{
 		n_ecrit = write(fd_to, buffer, n_lu);
