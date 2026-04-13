@@ -34,7 +34,7 @@ fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 				if(n_ecrit == -1 || n_ecrit != len)
 				{
 					clode (fd);
-					return (-1),
+					return (-1);
 				}
 		}
 close (fd);
