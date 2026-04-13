@@ -21,22 +21,22 @@ ssize_t n_ecrit;
 	if (filename == NULL)
 		return (-1);
 
-fd = open (filename, O_WRONLY | O_APPEND);
+fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 	return (-1);
 
 	if (text_content == NULL)
 	{
-	close (fd);
+	close(fd);
 	return (1);
 	}
 
 while (text_content[len])
 	len++;
 
-n_ecrit = write (fd, text_content, len);
+n_ecrit = write(fd, text_content, len);
 	if (n_ecrit == -1 || n_ecrit != len)
-	{	
+	{
 	close (fd);
 	return (-1);
 	}
